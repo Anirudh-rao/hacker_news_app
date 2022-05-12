@@ -52,18 +52,27 @@ class _MyHomePageState extends State<MyHomePage> {
           article.text,
           style: new TextStyle(fontSize: 20),
         ),
-        children: <Widget>[new Text("${article.commentsCount} comments"),
-        new Text("${article.score} score")],
-        //subtitle: ,
-        //onTap: () async {
-        //final FakeUrl = "https://${article.domain}";
-        //Canlaunch will return a Future
-        //hence we are using Async and wait
-        //in short Flutter Will wait for the url and Then Return the value
-        //if (await canLaunch(FakeUrl)) {
-        //launch(FakeUrl);
-        //}
-        //},
+        children: <Widget>[
+          Row(
+            //Expands  to fill whatever contains it
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              new Text("${article.commentsCount} comments"),
+              new Text("${article.score} score"),
+              new IconButton(
+                  icon: new Icon(Icons.launch),
+                  color: Colors.deepOrangeAccent,
+                  onPressed: () async {
+                    final FakeUrl = "https://${article.domain}";
+                    //CanLaunch Being a Future , We Will use async await
+                    //Await waits for URL to Launch and get verified
+                    if (await canLaunch(FakeUrl)) {
+                      launch(FakeUrl);
+                    }
+                  })
+            ],
+          ),
+        ],
       ),
     );
   }
