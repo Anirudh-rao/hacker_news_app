@@ -18,7 +18,8 @@ This is a Tutorial created from the youtube series [The Boring Flutter Developme
     ```git clone https://github.com/Anirudh-rao/hacker_news_app.git```
 3. Find and open the Folder name ```hacker_news_app``` with your favourite IDE 
 4. Now on the left Hand side of VS Code use the ```Run and Debug``` option to run the program.
-    ### Note: To Run make sure you Install and Configure ```AVD`` . Else Follow this [Link](https://developer.android.com/studio/run/managing-avds)
+  
+   *Note*: To Run make sure you Install and Configure ```AVD`` . Else Follow this [Link](https://developer.android.com/studio/run/managing-avds)
     
 Now you will be able to see the App in the AVD.
 Try Tinkering the Build Something Crazy.
